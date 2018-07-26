@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Class Inheritance </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: goldenrod;">
+    <h1 style="color:floralwhite; text-align:center; font-size: 140px;">JS 5 - Class Inheritance.</h1>
+    <script>
+        class Dog{
+            constructor(name){
+                this.name = name;
+            }
+            sleep(){
+                console.log("woof!");
+            }
+        }
+        /* Labrador Class that inherits from Dog class*/
+        class Labrador extends Dog{
+            constructor(name, color, breadweight){
+                super(name);
+                this.color =  color;
+                this.breadweight = breadweight;
+            }
+
+            sleep(){
+                console.log("Labrador says woof!"); 
+            }
+        }
+        /* Calling method sleep from Labrador class to override the parent function of sleep */
+
+        var a = new Labrador("Tony", "Blue", 102);
+        a.sleep();
+
+    </script>
+    
+</body>
+</html>
